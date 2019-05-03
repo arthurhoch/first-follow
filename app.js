@@ -59,6 +59,12 @@ const follow = (symbols, termial) => {
             termial: aBb[END]
         }
     }
+    
+    if (!isTerminal(aBb[START]) &&  !isTerminal(aBb[MIDDLE])) {
+        return {
+            first: aBb[START]
+        }
+    }
 
     return undefined;
 }
